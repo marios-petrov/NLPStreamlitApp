@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
+import nltk as nlp
+import os
 #import WikiBERT as bert
 #import WikiScrapper as ws
+
+st.title("BERT vs WikipediaAPI")
 
 input_type = st.radio("Input Type: ", ["URL", "Raw Text"])
 st.markdown("<h3 style='text-align: center;'>Input</h3>", unsafe_allow_html=True)
