@@ -121,6 +121,7 @@ def main():
                 if processingFunction == 'Count n-grams':
                     numberofNgrams = st.radio('n-gram size',('unigram','bigram'))
                     tokenizedText = nltk.word_tokenize(string_data)
+                    
                     if numberofNgrams == 'unigram':
                         unigrams = ngrams(tokenizedText,1)
                         unigramCount = Counter(unigrams)
@@ -190,6 +191,7 @@ def main():
             if processingFunction == 'Count n-grams':
                 numberofNgrams = st.radio('n-gram size',('unigram','bigram'))
                 tokenizedText = nltk.word_tokenize(raw_text)
+                
                 if numberofNgrams == 'unigram':
                     unigrams = ngrams(tokenizedText,1)
                     unigramCount = Counter(unigrams)
