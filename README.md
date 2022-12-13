@@ -1,4 +1,4 @@
-# BERTSummarizer
+# NLP Streamlit App
 
 
 
