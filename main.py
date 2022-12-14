@@ -34,6 +34,7 @@ def summarizer_result (raw_text, summarizer_choice):
     if summarizer_choice == "BERT":
         summarizer_result = BERT_Summarizer(raw_text)
         return summarizer_result
+
 def wikiScrapper(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,"xml")
