@@ -9,6 +9,7 @@ import string
 from collections import Counter
 from nltk.util import ngrams
 
+#These three following functions are my NLP summarizers implemented using the Summarizer library (XLNet performs the best)
 def BERT_Summarizer(input_text):
     bertModel = Summarizer()
     bertSummary = ''.join(bertModel(input_text,min_length=50))
@@ -24,6 +25,7 @@ def XLNet_Summarizer(input_text):
     xlnetSummary = ''.join(xlnetModel(input_text,min_length=50))
     return xlnetSummary
 
+#This is a helper function that generates the summary from the input and summary of choice
 def summarizer_result (raw_text, summarizer_choice):
     if summarizer_choice == "XLNet":
         summarizer_result = XLNet_Summarizer(raw_text)
@@ -34,6 +36,8 @@ def summarizer_result (raw_text, summarizer_choice):
     if summarizer_choice == "BERT":
         summarizer_result = BERT_Summarizer(raw_text)
         return summarizer_result
+
+#This iis my wikipedia scraper that I used BeautifulSoup to implement
 def wikiScrapper(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,"xml")
@@ -46,6 +50,7 @@ def wikiScrapper(url):
         text = "".join(paragraphs)
         return text
 
+#Main function where the magic happens
 def main():
     st.title ("NLP text Processing and Summarization")
     activityOptions = ["Summarization","Text Processing"]
