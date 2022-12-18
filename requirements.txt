@@ -2,3 +2,7 @@ requests~=2.28.1
 nltk~=3.8
 beautifulsoup4~=4.11.1
 summarizer~=0.0.7
+bert-extractive-summarizer~=0.10.1
+spacy~=2.0.12
+torch~=1.13.1
+streamlit~=1.16.0
