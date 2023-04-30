@@ -7,15 +7,15 @@ Coding and training your own summarizer, or executing your own text processing o
 
 Necessary Packages
 
--streamlit 
--io 
--BeautifulSoup 
--requests 
--re 
--summarizer 
--nltk 
--string 
--collections
+- streamlit 
+- io 
+- BeautifulSoup 
+- requests 
+- re 
+- summarizer 
+- nltk 
+- string 
+- collections
 
 Usage
 
